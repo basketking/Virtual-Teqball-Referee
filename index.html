@@ -1,0 +1,134 @@
+<!DOCTYPE html> 
+<html>
+
+    <head>
+        <div class="header">
+            <div class="headertext"> Virtual Teqball Referee 
+            </div> 
+            <img class ="logo" src="https://assets.fiteq.org/teqball/teqball-one.png" alt="Teqball Table Logo">
+        
+        
+        <button class="menubtn">How to play</button>
+
+        <div class="dropdown">
+            <button class="dropbtn">Select Video</button>
+            <div class="dropdown-content">
+              <a href="#" id="vid1" value="video1">Video 1</a>
+              <a href="#" id="vid2" value="video2">Video 2</a>
+              <a href="#" id="vid3" value="video3">Video 3</a>
+            </div>
+
+          </div>
+          
+        </div>
+    </head>
+    
+<body>
+
+
+<div id="particles-js"></div>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" href="main.css">
+<link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
+
+
+<div class="parent">
+    <div class="div1 video-player">
+        <video id="myVideo" controls width = "100%" >
+            <source src="video1.mp4" type="video/mp4" />
+        </video>
+        <div id="overlay" class="overlay">
+            Video1
+        </div>
+
+
+    </div>
+
+
+    <div class="div2">
+       
+       
+
+       
+       
+
+       
+
+        <div class="">
+            <button class="button" id="playbtn">Start challenge!</button>
+
+        </div>
+        <div id="buttonsdiv" class="nodisplay">
+            <button class="button buttonillegal" id="illegal" value="Illegal Attack" onclick =" var t= this; t.disabled = true; setTimeout(function() {t.disabled = false;},3000);">Illegal Attack</button>
+            <button class="button " id="remove" onclick =" var t= this; t.disabled = true; setTimeout(function() {t.disabled = false;},3000);">Undo</button>
+            <button class="button disabled" id="resultbtn" >Show results</button>
+        </div>
+        <div id="divtable">
+        <table id="mytablestyle">
+            <tbody>
+            <tr>
+                <th>Nr.</th>
+                <th>Your Call</th>
+                <th>Timecode</th>
+                <th id="hiddencol">Replay</th>
+                <th id="hiddencol">Solution</th>
+            </tr>
+            </tbody>
+        </table>
+        </div>
+
+        <div id="missedtable" class="aligned">
+            <p style="text-align: center; background-color: black; margin-bottom: 0; color: white; ">Your missed calls</p>
+
+            <table id="divtablemissed">
+                <tbody>
+                <tr>
+                    <th>Nr.</th>
+                    <th>Timecode</th>
+                    <th>Replay</th>
+                </tr>
+                </tbody>
+            </table>
+            </div>
+        <div id="results" class="aligned">
+        </div>
+    </div>
+    </div>
+
+
+    <div class="div3">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+  
+
+
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="main.js"></script>
+<script src="../particles.js"></script>
+<script src="../app.js"></script>
+
+
+
+</body> 
+</html>
+
+
+
