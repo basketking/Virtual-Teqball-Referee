@@ -1,3 +1,28 @@
+/* PRELOADER */
+
+(function(){ 
+  document.onreadystatechange = () => {
+    if (document.readyState === 'interactive') {
+              
+      /**
+       * Setup your Lazy Line element.
+       * see README file for more settings
+       */
+      let el = document.querySelector('#ONE_VECTOR_ILLUSTRATION');
+      let myAnimation = new LazyLinePainter(el, {"ease":"easeLinear","strokeWidth":4.6,"strokeOpacity":1,"strokeColor":"#222F3D","strokeCap":"square"}); 
+      myAnimation.paint();
+      setTimeout(function(){
+        el.setAttribute("class", "hidden")},
+        2000)
+    }
+  }
+})();
+
+
+
+
+
+
 var counter = 0;
 var timecodes = new Array();
 var minSec = new Array();
@@ -69,8 +94,10 @@ function clearTables(){
 }
 
 
+/* VIDEOS ARE HERE */
+
 document.getElementById("vid1").addEventListener("click", function () {
-  vid.setAttribute("src", "video1.mp4");
+  vid.setAttribute("src", "https://cdn.buttercms.com/OjemTzZeQoygSoN25LSx");
   solutions = [69.897515, 93.365608];
   clearTables();
   
