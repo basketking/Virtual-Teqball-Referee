@@ -94,6 +94,8 @@ function clearTables(){
 }
 
 
+
+
 /* VIDEOS ARE HERE */
 
 document.getElementById("vid1").addEventListener("click", function () {
@@ -120,21 +122,62 @@ function setCurTime() {
   vid.currentTime=5;
 } 
 
+/* MY JAVASCRIPT COURSE ASIDE */
+
+const gameEvents = new Map([
+  [17, 'GOAL'],
+  [19, 'SUBSTITUTION'],
+  [25, 'YELLOW CARD'],
+  [44, 'GOAL'],
+  [57, 'YELLOW CARD'],
+  [63, 'RED CARD'],
+  [91, 'GOAL']
+]
+)
+
+const uniqueEvents = new Set(gameEvents.values());
+console.log(uniqueEvents);
+
+gameEvents.delete(57);
+console.log(gameEvents);
+
+let differences = 0;
+let firstevent = 0;
+for (let i = 0; i < Array.from(gameEvents.keys()).length; i++) {
+  differences += (Array.from(gameEvents.keys())[i] - firstevent);
+  firstevent = Array.from(gameEvents.keys())[i];
+}
+
+console.log(differences);
 
 
+console.log(`An event happened on average every ${Math.round(differences / gameEvents.size)} minutes`);
+
+for (const [key, value] of gameEvents){
+  const half = key <=45 ? 'FIRST' : 'SECOND';
+  console.log(`${half} HALF: ${key}: ${value}`)
+}
 
 
+function passangerName(passanger) {
+  let lower = passanger.toLowerCase();
+  let correct = lower[0].toUpperCase() + lower.slice(1);
+  return correct;
+}
+console.log(passangerName('sDsadkSdSdk sadasdasASDAS '))
 
 
+function capitalizeName(name){
+  let splitname = name.toLowerCase().split(' ');
+  let finalname = [];
+  for (const n of splitname){
+   finalname.push(n[0].toUpperCase() + n.slice(1));  
+    return finalname.join(' '); }
+}
 
+console.log(capitalizeName('SorDDrs Gyors'))
 
-
-
-
-
-
-
-
+/* END ASIDE */
 
 
 
